@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <title>Jurnal & LKH - MTs Al Ihsan</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f6f9; }
     h2 { text-align: center; margin-bottom: 20px; }
-    .section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     label { display: block; margin-top: 10px; font-weight: bold; }
-    input, textarea, select { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
-    .admin-section { display: none; background: #eef; }
+    input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    .admin-section { display: none; background: #eef; padding: 10px; margin-top: 15px; border-radius: 6px; }
     .buttons { text-align: center; margin-top: 20px; }
-    .buttons button { margin: 5px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    .buttons button:hover { background: #ddd; }
+    .buttons button { margin: 5px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background: #007bff; color: #fff; }
+    .buttons button:hover { background: #0056b3; }
     table { width: 100%; border-collapse: collapse; margin-top: 15px; }
     th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-    .add-remove { margin-top: 10px; }
+    .add-remove { margin-top: 10px; text-align: right; }
+    .add-remove button { margin-left: 5px; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; background: #28a745; color: #fff; }
+    .add-remove button.remove { background: #dc3545; }
   </style>
 </head>
 <body>
@@ -81,3 +83,49 @@
         <td><input type="number" value="0"></td>
         <td><input type="number" value="0"></td>
       </tr>
+    </table>
+    <div class="add-remove">
+      <button onclick="addRow()">Tambah Kelas</button>
+      <button class="remove" onclick="removeRow()">Hapus Kelas</button>
+    </div>
+  </div>
+
+  <!-- Tombol Aksi -->
+  <div class="buttons">
+    <button>Import Excel</button>
+    <button>Isi Jurnal</button>
+    <button>Hapus Baris</button>
+    <button>Export Excel</button>
+    <button>Cetak ke PDF</button>
+  </div>
+
+  <script>
+    function showAdmin() {
+      const pass = document.getElementById("adminPassword").value;
+      if (pass === "MataramNo34") {
+        document.getElementById("adminSection").style.display = "block";
+      } else {
+        alert("Password salah!");
+      }
+    }
+
+    function addRow() {
+      const table = document.getElementById("kelasTable");
+      const row = table.insertRow();
+      row.innerHTML = `
+        <td><input type="text" placeholder="Nama Kelas"></td>
+        <td><input type="number" value="0"></td>
+        <td><input type="number" value="0"></td>
+      `;
+    }
+
+    function removeRow() {
+      const table = document.getElementById("kelasTable");
+      if (table.rows.length > 2) {
+        table.deleteRow(-1);
+      }
+    }
+  </script>
+
+</body>
+</html>
