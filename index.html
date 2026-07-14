@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Input Jurnal & LKH</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Jurnal & LKH - MTs Al Ihsan</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    .section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    .admin-section { display: none; background: #eef; }
+    .buttons { text-align: center; margin-top: 20px; }
+    .buttons button { margin: 5px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .buttons button:hover { background: #ddd; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .add-remove { margin-top: 10px; }
+  </style>
 </head>
 <body>
-  <h2>Form Input Jurnal & LKH</h2>
-  <form id="jurnalForm">
-    <label>Nama Guru:</label>
-    <input type="text" name="nama_guru" required><br>
 
-    <label>NIP:</label>
-    <input type="text" name="nip" required><br>
+  <h2>JURNAL & LKH - Halaman Utama</h2>
 
-    <label>Tanggal:</label>
-    <input type="date" name="tanggal" required><br>
+  <!-- Bagian Pengaturan Utama -->
+  <div class="section">
+    <h3>Pengaturan Utama</h3>
+    <label>Tahun Pelajaran</label>
+    <input type="text" value="2026/2027" readonly>
+    <label>Waktu Laporan</label>
+    <input type="text" value="Juli 2026" readonly>
+  </div>
 
-    <label>Kegiatan:</label>
-    <textarea name="kegiatan" required></textarea><br>
+  <!-- Bagian User Input -->
+  <div class="section">
+    <h3>Identitas Guru</h3>
+    <label>Nama Guru</label>
+    <input type="text" name="nama_guru">
+    <label>NIP</label>
+    <input type="text" name="nip">
+    <label>No Sertifikasi</label>
+    <input type="text" name="sertifikasi">
+    <label>Pangkat/Gol Ruang</label>
+    <input type="text" name="pangkat">
+    <label>Pendidikan</label>
+    <input type="text" name="pendidikan">
+    <label>Status Guru</label>
+    <input type="text" name="status_guru">
+  </div>
 
-    <button type="submit">Generate PDF</button>
-  </form>
+  <!-- Bagian Admin Input (tersembunyi) -->
+  <div class="section">
+    <h3>Pengaturan Admin</h3>
+    <label>Password Admin</label>
+    <input type="password" id="adminPassword" placeholder="Masukkan password...">
+    <button onclick="showAdmin()">Buka Pengaturan Admin</button>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div id="adminSection" class="admin-section">
+      <label>Kepala Madrasah</label>
+      <input type="text" name="kepala_madrasah">
+      <label>NIP Kepala Madrasah</label>
+      <input type="text" name="nip_kepala">
+      <label>Pengawas Madrasah</label>
+      <input type="text" name="pengawas">
+      <label>NIP Pengawas</label>
+      <input type="text" name="nip_pengawas">
+    </div>
+  </div>
+
+  <!-- Data Jumlah Siswa/Ekstrakurikuler -->
+  <div class="section">
+    <h3>Data Jumlah Siswa / Ekstrakurikuler</h3>
+    <table id="kelasTable">
+      <tr>
+        <th>Nama Kelas</th>
+        <th>L</th>
+        <th>P</th>
+      </tr>
+      <tr>
+        <td><input type="text" value="VII A"></td>
+        <td><input type="number" value="0"></td>
+        <td><input type="number" value="0"></td>
+      </tr>
