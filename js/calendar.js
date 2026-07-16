@@ -46,8 +46,6 @@ getTanggalTerakhir() {
            this.getNamaBulan() + " " +
            this.getTahun();
 
-console.log("calendar.js berhasil dimuat");
-
 }
 
 };
