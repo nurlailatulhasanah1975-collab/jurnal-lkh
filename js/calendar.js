@@ -48,28 +48,6 @@ getTanggalTerakhir() {
 
 console.log("calendar.js berhasil dimuat");
 
-},
-
-getHariTerakhir() {
-
-    const tanggal = new Date(
-        this.getTahun(),
-        this.getNomorBulan() - 1,
-        this.getJumlahHari()
-    );
-
-    const namaHari = [
-        "Minggu",
-        "Senin",
-        "Selasa",
-        "Rabu",
-        "Kamis",
-        "Jumat",
-        "Sabtu"
-    ];
-
-    return namaHari[tanggal.getDay()];
-
 }
-    
+
 };
