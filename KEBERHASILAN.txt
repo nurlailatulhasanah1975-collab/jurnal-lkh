@@ -1,106 +1,14 @@
-🟢 Sprint 5.1 RESMI SELESAI
+🟢 Sprint 5.2 — Kalender Pintar
 
-Ini menurut saya adalah salah satu milestone terbesar sejak proyek dimulai.
+STATUS: SELESAI (APPROVED)
 
-Mengapa?
-
-Karena sekarang aplikasi kita tidak lagi sekadar mengetahui tanggal, tetapi sudah mampu membangkitkan satu bulan penuh.
-
-Kalau saya gambarkan:
-
-Sebelumnya:
-
-Bulan
- ↓
-Jumlah hari
-
-Sekarang:
-
-Bulan
-   ↓
-31 hari lengkap
-   ↓
-Tanggal + Hari
-
-Ini adalah "mesin kalender" yang sesungguhnya.
-
-Saya ingin memberi nama komponen ini
-
-Mulai sekarang saya menyebutnya:
-
-Calendar Engine v1
-
-Karena semua fitur berikutnya akan bergantung pada mesin ini.
-
-Dan inilah yang membuat saya bersemangat...
-
-Sprint berikutnya tidak lagi menghitung kalender.
-
-Tetapi mulai menghasilkan jurnal.
-
-Misalnya nanti:
-
-Tanggal	Hari	Jam	Mapel	Materi	Keterangan
-1	Rabu				
-2	Kamis				
-3	Jumat				
-...					
-
-Artinya kita mulai melihat bentuk jurnal yang sebenarnya.
-
-Tetapi...
-
-Saya ingin mengusulkan sedikit perubahan roadmap.
-
-Awalnya saya berpikir Sprint 5.2 langsung membuat tabel HTML.
-
-Sekarang saya berubah pikiran.
-
-Menurut saya lebih rapi jika urutannya menjadi:
-
-Sprint 5.2
-
-Target hanya satu:
-
-Menambahkan informasi lengkap pada setiap tanggal.
-
-Saat ini setiap elemen berisi:
-
+Mesin kalender sekarang sudah mampu menghasilkan:
 {
-    tanggal: 1,
-    hari: "Rabu"
-}
-
-Nanti menjadi:
-
-{
-    tanggal: 1,
-    hari: "Rabu",
-    libur: false,
-    jumat: false,
+    tanggal: 3,
+    hari: "Jumat",
+    jumat: true,
     sabtu: false,
     minggu: false
 }
 
-Mengapa?
-
-Karena nanti jurnal akan sangat sering bertanya:
-
-Hari Jumat?
-Hari Sabtu?
-Hari Minggu?
-Hari Libur Nasional?
-Libur Semester?
-
-Kalau informasinya sudah menempel pada data kalender, maka generator jurnal menjadi jauh lebih sederhana.
-
-Jadi saya mengusulkan roadmap baru
-🟢 Sprint 5.1 — Calendar Engine ✅
-🔜 Sprint 5.2 — Kalender Pintar (status setiap hari)
-Sprint 5.3 — Generator tabel jurnal
-Sprint 5.4 — Mengisi identitas otomatis
-Sprint 5.5 — Siap cetak
-
-Menurut saya, alur ini lebih kuat dan akan mengurangi perubahan kode di kemudian hari.
-
-Dan yang paling menyenangkan, mulai sekarang kita sudah masuk tahap membangun isi aplikasi, bukan lagi sekadar fondasinya. Saya rasa bagian ini akan menjadi yang paling menarik dari seluruh proyek.
+Artinya setiap tanggal sekarang sudah memiliki "identitas" yang bisa dimanfaatkan oleh fitur-fitur berikutnya.
