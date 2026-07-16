@@ -1,0 +1,271 @@
+/*==========================================================
+JURNAL MENGAJAR & LKH
+MTs. Al Ihsan Tanah Grogot
+Theme : Modern Madrasah v2.0
+==========================================================*/
+
+body{
+
+    background:#f5f6f8;
+
+    font-family:"Segoe UI",Tahoma,sans-serif;
+
+    color:#343a40;
+
+}
+
+
+/*==========================================================
+
+CARD
+
+==========================================================*/
+
+.card{
+
+    border:none;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+    background:#ffffff;
+
+}
+
+
+/*==========================================================
+
+HEADER APLIKASI
+
+==========================================================*/
+
+.card-header{
+
+    background:#198754;
+
+    color:#ffffff;
+
+    padding:18px 24px;
+
+    border:none;
+
+}
+
+.card-header h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:2px;
+
+}
+
+.card-header small{
+
+    font-size:15px;
+
+    opacity:.95;
+
+}
+
+
+/*==========================================================
+
+HEADER SECTION
+
+==========================================================*/
+
+.section-title{
+
+    background:#eef6f1;
+
+    color:#146c43;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    padding:10px 18px;
+
+    border-left:5px solid #198754;
+
+    margin-bottom:15px;
+
+    border-radius:8px;
+
+}
+
+
+/*==========================================================
+
+LABEL
+
+==========================================================*/
+
+label{
+
+    font-weight:600;
+
+    color:#495057;
+
+}
+
+
+/*==========================================================
+
+SELECT
+
+==========================================================*/
+
+.form-select{
+
+    height:42px;
+
+    border-radius:10px;
+
+    border:1px solid #d6dbe1;
+
+    transition:.2s;
+
+}
+
+.form-select:focus{
+
+    border-color:#198754;
+
+    box-shadow:0 0 0 .15rem rgba(25,135,84,.15);
+
+}
+
+
+/*==========================================================
+
+BUTTON
+
+==========================================================*/
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    padding:8px 18px;
+
+}
+
+
+/*==========================================================
+
+IDENTITAS
+
+==========================================================*/
+
+.table-borderless{
+
+    margin-bottom:0;
+
+}
+
+.table-borderless th{
+
+    width:170px;
+
+    color:#495057;
+
+    font-weight:600;
+
+    padding:6px 10px;
+
+}
+
+.table-borderless td{
+
+    padding:6px 10px;
+
+}
+
+
+/*==========================================================
+
+TABEL JURNAL
+
+==========================================================*/
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:#dff3e6;
+
+}
+
+.table thead th{
+
+    color:#146c43;
+
+    text-align:center;
+
+    font-weight:700;
+
+    border:1px solid #c9e7d3;
+
+}
+
+.table tbody td{
+
+    vertical-align:middle;
+
+    border:1px solid #ececec;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f5fbf7;
+
+}
+
+
+/*==========================================================
+
+STATUS
+
+==========================================================*/
+
+#statusAplikasi{
+
+    color:#198754;
+
+    font-weight:600;
+
+}
+
+
+/*==========================================================
+
+FOOTER
+
+==========================================================*/
+
+footer{
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+    margin-top:20px;
+
+}
