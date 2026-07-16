@@ -68,6 +68,45 @@ getHariTerakhir() {
 
     return namaHari[tanggal.getDay()];
 
+},
+
+    getDaftarTanggal() {
+
+    const daftar = [];
+
+    const jumlahHari = this.getJumlahHari();
+
+    const tahun = this.getTahun();
+
+    const bulan = this.getNomorBulan();
+
+    const namaHari = [
+        "Minggu",
+        "Senin",
+        "Selasa",
+        "Rabu",
+        "Kamis",
+        "Jumat",
+        "Sabtu"
+    ];
+
+    for (let tgl = 1; tgl <= jumlahHari; tgl++) {
+
+        const tanggal = new Date(tahun, bulan - 1, tgl);
+
+        daftar.push({
+
+            tanggal: tgl,
+
+            hari: namaHari[tanggal.getDay()]
+
+        });
+
+    }
+
+    return daftar;
+
 }
 
 };
+    
