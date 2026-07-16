@@ -94,7 +94,7 @@ getHariTerakhir() {
 
         const tanggal = new Date(tahun, bulan - 1, tgl);
 
-        const hari = namaHari[tanggal.getDay()],
+        const hari = namaHari[tanggal.getDay()];
 
 daftar.push({
 
