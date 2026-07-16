@@ -1,47 +1,106 @@
-🟢 Sprint 4.4 RESMI DITUTUP
+🟢 Sprint 5.1 RESMI SELESAI
 
-Hasil yang kita capai:
+Ini menurut saya adalah salah satu milestone terbesar sejak proyek dimulai.
 
-✅ Kalender.getNomorBulan()
-✅ Kalender.getNamaBulan()
-✅ Kalender.getTahun()
-✅ Kalender.getJumlahHari()
-✅ Kalender.getTanggalTerakhir()
-✅ Kalender.getHariTerakhir()
+Mengapa?
 
-Mesin kalender sekarang sudah mampu:
+Karena sekarang aplikasi kita tidak lagi sekadar mengetahui tanggal, tetapi sudah mampu membangkitkan satu bulan penuh.
 
-mengetahui bulan dan tahun yang dipilih,
-menghitung jumlah hari dengan benar (termasuk tahun kabisat),
-menentukan tanggal terakhir bulan,
-menentukan nama hari pada tanggal tersebut.
-Status Proyek
+Kalau saya gambarkan:
 
-🟢 Sprint 1 — Selesai
+Sebelumnya:
 
-🟢 Sprint 2 — Selesai
+Bulan
+ ↓
+Jumlah hari
 
-🟢 Sprint 3 — Selesai
+Sekarang:
 
-🟢 Sprint 4.1 — Selesai
+Bulan
+   ↓
+31 hari lengkap
+   ↓
+Tanggal + Hari
 
-🟢 Sprint 4.2 — Selesai
+Ini adalah "mesin kalender" yang sesungguhnya.
 
-🟢 Sprint 4.3 — Selesai
+Saya ingin memberi nama komponen ini
 
-🟢 Sprint 4.4 — Selesai
+Mulai sekarang saya menyebutnya:
 
-Catatan penting yang kita pelajari
+Calendar Engine v1
 
-Saya juga mencatat beberapa pelajaran dari sprint ini:
+Karena semua fitur berikutnya akan bergantung pada mesin ini.
 
-Jangan menguji dengan file:/// jika hasilnya mulai membingungkan; GitHub Pages lebih konsisten.
-Setelah return, jangan ada kode lagi karena tidak akan dieksekusi.
-Pada objek JavaScript, fungsi yang masih diikuti fungsi lain harus diakhiri dengan koma (},).
-Debugging dilakukan berdasarkan gejala → penyebab → perbaikan, bukan langsung mengubah kode.
+Dan inilah yang membuat saya bersemangat...
 
-Ini akan menjadi pedoman kita untuk sprint-sprint berikutnya.
+Sprint berikutnya tidak lagi menghitung kalender.
 
-Sekarang mesin kalender sudah memiliki fondasi yang kuat. Pada Sprint 5 nanti, kita bisa mulai membangun fitur yang benar-benar menghasilkan isi jurnal secara otomatis berdasarkan kalender tersebut.
+Tetapi mulai menghasilkan jurnal.
 
-Selamat! Satu langkah besar lagi telah selesai. 🚀
+Misalnya nanti:
+
+Tanggal	Hari	Jam	Mapel	Materi	Keterangan
+1	Rabu				
+2	Kamis				
+3	Jumat				
+...					
+
+Artinya kita mulai melihat bentuk jurnal yang sebenarnya.
+
+Tetapi...
+
+Saya ingin mengusulkan sedikit perubahan roadmap.
+
+Awalnya saya berpikir Sprint 5.2 langsung membuat tabel HTML.
+
+Sekarang saya berubah pikiran.
+
+Menurut saya lebih rapi jika urutannya menjadi:
+
+Sprint 5.2
+
+Target hanya satu:
+
+Menambahkan informasi lengkap pada setiap tanggal.
+
+Saat ini setiap elemen berisi:
+
+{
+    tanggal: 1,
+    hari: "Rabu"
+}
+
+Nanti menjadi:
+
+{
+    tanggal: 1,
+    hari: "Rabu",
+    libur: false,
+    jumat: false,
+    sabtu: false,
+    minggu: false
+}
+
+Mengapa?
+
+Karena nanti jurnal akan sangat sering bertanya:
+
+Hari Jumat?
+Hari Sabtu?
+Hari Minggu?
+Hari Libur Nasional?
+Libur Semester?
+
+Kalau informasinya sudah menempel pada data kalender, maka generator jurnal menjadi jauh lebih sederhana.
+
+Jadi saya mengusulkan roadmap baru
+🟢 Sprint 5.1 — Calendar Engine ✅
+🔜 Sprint 5.2 — Kalender Pintar (status setiap hari)
+Sprint 5.3 — Generator tabel jurnal
+Sprint 5.4 — Mengisi identitas otomatis
+Sprint 5.5 — Siap cetak
+
+Menurut saya, alur ini lebih kuat dan akan mengurangi perubahan kode di kemudian hari.
+
+Dan yang paling menyenangkan, mulai sekarang kita sudah masuk tahap membangun isi aplikasi, bukan lagi sekadar fondasinya. Saya rasa bagian ini akan menjadi yang paling menarik dari seluruh proyek.
