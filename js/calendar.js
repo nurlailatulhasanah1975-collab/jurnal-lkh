@@ -48,7 +48,7 @@ getTanggalTerakhir() {
 
 console.log("calendar.js berhasil dimuat");
 
-}
+},
 
 getHariTerakhir() {
 
