@@ -1,131 +1,435 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Jurnal & LKH - MTs Al Ihsan</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f6f9; }
-    h2 { text-align: center; margin-bottom: 20px; }
-    .section { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    label { display: block; margin-top: 10px; font-weight: bold; }
-    input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
-    .admin-section { display: none; background: #eef; padding: 10px; margin-top: 15px; border-radius: 6px; }
-    .buttons { text-align: center; margin-top: 20px; }
-    .buttons button { margin: 5px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background: #007bff; color: #fff; }
-    .buttons button:hover { background: #0056b3; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-    .add-remove { margin-top: 10px; text-align: right; }
-    .add-remove button { margin-left: 5px; padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; background: #28a745; color: #fff; }
-    .add-remove button.remove { background: #dc3545; }
-  </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jurnal Mengajar & LKH</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
-  <h2>JURNAL & LKH - Halaman Utama</h2>
+<div class="container-fluid py-3">
 
-  <!-- Bagian Pengaturan Utama -->
-  <div class="section">
-    <h3>Pengaturan Utama</h3>
-    <label>Tahun Pelajaran</label>
-    <input type="text" value="2026/2027" readonly>
-    <label>Waktu Laporan</label>
-    <input type="text" value="Juli 2026" readonly>
-  </div>
+    <!-- ==========================================================
+         HEADER
+    =========================================================== -->
 
-  <!-- Bagian User Input -->
-  <div class="section">
-    <h3>Identitas Guru</h3>
-    <label>Nama Guru</label>
-    <input type="text" name="nama_guru">
-    <label>NIP</label>
-    <input type="text" name="nip">
-    <label>No Sertifikasi</label>
-    <input type="text" name="sertifikasi">
-    <label>Pangkat/Gol Ruang</label>
-    <input type="text" name="pangkat">
-    <label>Pendidikan</label>
-    <input type="text" name="pendidikan">
-    <label>Status Guru</label>
-    <input type="text" name="status_guru">
-  </div>
+    <div class="card shadow-sm mb-3">
 
-  <!-- Bagian Admin Input (tersembunyi) -->
-  <div class="section">
-    <h3>Pengaturan Admin</h3>
-    <label>Password Admin</label>
-    <input type="password" id="adminPassword" placeholder="Masukkan password...">
-    <button onclick="showAdmin()">Buka Pengaturan Admin</button>
+        <div class="card-header bg-success text-white">
 
-    <div id="adminSection" class="admin-section">
-      <label>Kepala Madrasah</label>
-      <input type="text" name="kepala_madrasah">
-      <label>NIP Kepala Madrasah</label>
-      <input type="text" name="nip_kepala">
-      <label>Pengawas Madrasah</label>
-      <input type="text" name="pengawas">
-      <label>NIP Pengawas</label>
-      <input type="text" name="nip_pengawas">
+            <h3 class="mb-0">
+
+                JURNAL MENGAJAR & LKH
+
+            </h3>
+
+            <small>
+
+                MTs Al Ihsan Tanah Grogot
+
+            </small>
+
+        </div>
+
+        <div class="card-body">
+
+            <!-- ============================
+                 BARIS 1
+            ============================= -->
+
+            <div class="row mb-3">
+
+                <!-- Guru -->
+
+                <div class="col-md-5">
+
+                    <label class="form-label">
+
+                        Nama Guru
+
+                    </label>
+
+                    <select
+                        id="guruSelect"
+                        class="form-select">
+
+                    </select>
+
+                </div>
+
+                <!-- Bulan -->
+
+                <div class="col-md-4">
+
+                    <label class="form-label">
+
+                        Bulan
+
+                    </label>
+
+                    <select
+                        id="bulanSelect"
+                        class="form-select">
+
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7" selected>Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Tahun -->
+
+                <div class="col-md-3">
+
+                    <label class="form-label">
+
+                        Tahun
+
+                    </label>
+
+                    <select
+                        id="tahunSelect"
+                        class="form-select">
+
+                        <option>2025</option>
+						<option selected>2026</option>
+						<option>2027</option>
+						<option>2028</option>
+						<option>2029</option>
+						<option>2030</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- ============================
+                 BARIS 2
+            ============================= -->
+
+            <div class="row">
+
+                <div class="col text-end">
+
+                    <button
+                        id="btnImport"
+                        class="btn btn-primary">
+
+                        📂 Import Excel
+
+                    </button>
+
+                    <button
+                        id="btnExport"
+                        class="btn btn-success">
+
+                        💾 Export Excel
+
+                    </button>
+
+                    <button
+                        id="btnPdf"
+                        class="btn btn-danger">
+
+                        🖨 Cetak PDF
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
 
-  <!-- Data Jumlah Siswa/Ekstrakurikuler -->
-  <div class="section">
-    <h3>Data Jumlah Siswa / Ekstrakurikuler</h3>
-    <table id="kelasTable">
-      <tr>
-        <th>Nama Kelas</th>
-        <th>L</th>
-        <th>P</th>
-      </tr>
-      <tr>
-        <td><input type="text" value="VII A"></td>
-        <td><input type="number" value="0"></td>
-        <td><input type="number" value="0"></td>
-      </tr>
-    </table>
-    <div class="add-remove">
-      <button onclick="addRow()">Tambah Kelas</button>
-      <button class="remove" onclick="removeRow()">Hapus Kelas</button>
+    <!-- ==========================================================
+         IDENTITAS GURU
+    =========================================================== -->
+
+    <div class="card shadow-sm mb-3">
+
+        <div class="card-header">
+
+            Identitas Guru
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <table class="table table-borderless">
+
+                        <tr>
+
+                            <th width="180">
+
+                                Nama
+
+                            </th>
+
+                            <td id="guruNama">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>
+
+                                NIP
+
+                            </th>
+
+                            <td id="guruNip">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>
+
+                                Sertifikasi
+
+                            </th>
+
+                            <td id="guruSertifikasi">
+
+                                -
+
+                            </td>
+
+                        </tr>
+                        <tr>
+
+                            <th>
+
+                                Pangkat
+
+                            </th>
+
+                            <td id="guruPangkat">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <table class="table table-borderless">
+
+                        <tr>
+
+                            <th width="180">
+
+                                Pendidikan
+
+                            </th>
+
+                            <td id="guruPendidikan">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>
+
+                                Status
+
+                            </th>
+
+                            <td id="guruStatus">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>
+
+                                Mata Pelajaran
+
+                            </th>
+
+                            <td id="guruMapel">
+
+                                -
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
 
-  <!-- Tombol Aksi -->
-  <div class="buttons">
-    <button>Import Excel</button>
-    <button>Isi Jurnal</button>
-    <button>Hapus Baris</button>
-    <button>Export Excel</button>
-    <button>Cetak ke PDF</button>
-  </div>
+    <!-- ==========================================================
+         TABEL JURNAL
+    =========================================================== -->
 
-  <script>
-    function showAdmin() {
-      const pass = document.getElementById("adminPassword").value;
-      if (pass === "MataramNo34") {
-        document.getElementById("adminSection").style.display = "block";
-      } else {
-        alert("Password salah!");
-      }
-    }
+    <div class="card shadow-sm">
 
-    function addRow() {
-      const table = document.getElementById("kelasTable");
-      const row = table.insertRow();
-      row.innerHTML = `
-        <td><input type="text" placeholder="Nama Kelas"></td>
-        <td><input type="number" value="0"></td>
-        <td><input type="number" value="0"></td>
-      `;
-    }
+        <div class="card-header">
 
-    function removeRow() {
-      const table = document.getElementById("kelasTable");
-      if (table.rows.length > 2) {
-        table.deleteRow(-1);
-      }
-    }
-  </script>
+            Jurnal Mengajar
 
+        </div>
+
+        <div class="card-body p-0">
+
+            <div class="table-responsive">
+
+                <table
+                    id="tblJurnal"
+                    class="table table-bordered table-hover align-middle mb-0">
+
+                    <thead class="table-success">
+
+                        <tr>
+
+                            <th width="50">No</th>
+
+                            <th width="120">Hari</th>
+
+                            <th width="120">Tanggal</th>
+
+                            <th width="90">Jam</th>
+
+                            <th width="90">Kelas</th>
+
+                            <th width="180">Mapel</th>
+
+                            <th>Materi</th>
+
+                            <th>Hasil</th>
+
+                            <th width="50">S</th>
+
+                            <th width="50">I</th>
+
+                            <th width="50">A</th>
+
+                            <th width="120">Ket</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tbodyJurnal">
+                        <tr>
+
+                            <td colspan="12"
+                                class="text-center text-muted py-5">
+
+                                Belum ada data jurnal.
+                                <br>
+                                Silakan pilih guru kemudian lakukan Import Excel.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         STATUS
+    =========================================================== -->
+
+    <div class="card shadow-sm mt-3">
+
+        <div class="card-body py-2">
+
+            <span class="fw-bold">
+
+                Status :
+
+            </span>
+
+            <span id="statusAplikasi">
+
+                Siap digunakan.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     LIBRARY
+=========================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+
+<!-- ==========================================================
+     JAVASCRIPT
+=========================================================== -->
+
+<script src="js/guru.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/app.js"></script>
 </body>
+
 </html>
