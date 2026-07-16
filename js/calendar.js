@@ -38,6 +38,16 @@ getJumlahHari() {
 
     return new Date(tahun, bulan, 0).getDate();
 
+},
+
+getTanggalTerakhir() {
+
+    return this.getJumlahHari() + " " +
+           this.getNamaBulan() + " " +
+           this.getTahun();
+
+console.log("calendar.js berhasil dimuat");
+
 }
 
 };
