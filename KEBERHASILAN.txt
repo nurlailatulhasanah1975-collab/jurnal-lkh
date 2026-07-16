@@ -1,0 +1,47 @@
+🟢 Sprint 4.4 RESMI DITUTUP
+
+Hasil yang kita capai:
+
+✅ Kalender.getNomorBulan()
+✅ Kalender.getNamaBulan()
+✅ Kalender.getTahun()
+✅ Kalender.getJumlahHari()
+✅ Kalender.getTanggalTerakhir()
+✅ Kalender.getHariTerakhir()
+
+Mesin kalender sekarang sudah mampu:
+
+mengetahui bulan dan tahun yang dipilih,
+menghitung jumlah hari dengan benar (termasuk tahun kabisat),
+menentukan tanggal terakhir bulan,
+menentukan nama hari pada tanggal tersebut.
+Status Proyek
+
+🟢 Sprint 1 — Selesai
+
+🟢 Sprint 2 — Selesai
+
+🟢 Sprint 3 — Selesai
+
+🟢 Sprint 4.1 — Selesai
+
+🟢 Sprint 4.2 — Selesai
+
+🟢 Sprint 4.3 — Selesai
+
+🟢 Sprint 4.4 — Selesai
+
+Catatan penting yang kita pelajari
+
+Saya juga mencatat beberapa pelajaran dari sprint ini:
+
+Jangan menguji dengan file:/// jika hasilnya mulai membingungkan; GitHub Pages lebih konsisten.
+Setelah return, jangan ada kode lagi karena tidak akan dieksekusi.
+Pada objek JavaScript, fungsi yang masih diikuti fungsi lain harus diakhiri dengan koma (},).
+Debugging dilakukan berdasarkan gejala → penyebab → perbaikan, bukan langsung mengubah kode.
+
+Ini akan menjadi pedoman kita untuk sprint-sprint berikutnya.
+
+Sekarang mesin kalender sudah memiliki fondasi yang kuat. Pada Sprint 5 nanti, kita bisa mulai membangun fitur yang benar-benar menghasilkan isi jurnal secara otomatis berdasarkan kalender tersebut.
+
+Selamat! Satu langkah besar lagi telah selesai. 🚀
