@@ -46,7 +46,7 @@ getTanggalTerakhir() {
            this.getNamaBulan() + " " +
            this.getTahun();
 
-}
+},
 
 getHariTerakhir() {
 
