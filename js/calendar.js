@@ -40,26 +40,14 @@ getJumlahHari() {
 
 },
 
-getHariTerakhir() {
+getTanggalTerakhir() {
 
-    const tanggal = new Date(
-        this.getTahun(),
-        this.getNomorBulan() - 1,
-        this.getJumlahHari()
-    );
+    return this.getJumlahHari() + " " +
+           this.getNamaBulan() + " " +
+           this.getTahun();
 
-    const namaHari = [
-        "Minggu",
-        "Senin",
-        "Selasa",
-        "Rabu",
-        "Kamis",
-        "Jumat",
-        "Sabtu"
-    ];
-
-    return namaHari[tanggal.getDay()];
+console.log("calendar.js berhasil dimuat");
 
 }
-    
+
 };
