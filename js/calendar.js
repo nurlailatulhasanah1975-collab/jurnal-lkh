@@ -38,36 +38,6 @@ getJumlahHari() {
 
     return new Date(tahun, bulan, 0).getDate();
 
-},
-
-getTanggalTerakhir() {
-
-    return this.getJumlahHari() + " " +
-           this.getNamaBulan() + " " +
-           this.getTahun();
-
-},
-
-getHariTerakhir() {
-
-    const tanggal = new Date(
-        this.getTahun(),
-        this.getNomorBulan() - 1,
-        this.getJumlahHari()
-    );
-
-    const namaHari = [
-        "Minggu",
-        "Senin",
-        "Selasa",
-        "Rabu",
-        "Kamis",
-        "Jumat",
-        "Sabtu"
-    ],
-
-    return namaHari[tanggal.getDay()];
-
 }
-    
+
 };
