@@ -90,30 +90,29 @@ getHariTerakhir() {
         "Sabtu"
     ];
 
-    Apa ada yang salah lagi
 for (let tgl = 1; tgl <= jumlahHari; tgl++) {
 
-        const tanggal = new Date(tahun, bulan - 1, tgl);
+    const tanggal = new Date(tahun, bulan - 1, tgl);
 
-        const hari = namaHari[tanggal.getDay()],
+    const hari = namaHari[tanggal.getDay()];
 
-daftar.push({
+    daftar.push({
 
-    tanggal: tgl,
+        tanggal: tgl,
 
-    hari: hari,
+        hari: hari,
 
-    jumat: hari === "Jumat",
+        jumat: hari === "Jumat",
 
-    sabtu: hari === "Sabtu",
+        sabtu: hari === "Sabtu",
 
-    minggu: hari === "Minggu"
+        minggu: hari === "Minggu"
 
-});
+    });
 
-    }
+}
 
-    return daftar;
+return daftar;
 
 }
 
