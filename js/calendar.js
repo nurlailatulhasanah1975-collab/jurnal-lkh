@@ -66,7 +66,7 @@ getHariTerakhir() {
         "Sabtu"
     ];
 
-    return namaHari[tanggal.getDay()];
+    return namaHari[tanggal.getDay()],
 
 getDaftarTanggal() {
 
